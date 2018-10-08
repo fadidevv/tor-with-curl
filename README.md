@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-PHP Tor + cURL + Simple-Html-Parser api to securely make any HTTP GET/POST requests or scrape websites.
+PHP Tor + cURL + Simple-Html-Dom api to securely make any HTTP GET/POST requests or scrape websites.
 
   - Protected from webcrawler detectors
   - fully supported popular web-scraper SHP
@@ -14,17 +14,17 @@ PHP Tor + cURL + Simple-Html-Parser api to securely make any HTTP GET/POST reque
 
 - PHP 5.3 or higher
 - cURL
-- Simple Html Parser
+- Simple Html Dom
 - Tor installed in server
 
 ### Installation
 
-Just download api.php && simple_html_parser.php class in your project folder and start using this powerful API for making HTTP GET/POST requests or scraping websites securely.
+Just download api.php && simple_html_dom.php class in your project folder and start using this powerful API for making HTTP GET/POST requests or scraping websites securely.
 
 ### Example of GET request
 
 ```php
-require 'simple_html_parser.php'; // include a simple-html-parser class 
+require 'simple_html_dom.php'; // include a simple-html-dom class 
 require 'api.php';  // include a api class 
 $api = new Api(); // initialized api class
 echo $api->getApiResponse('http://example.com'); // if 200 code return results else 404 code return '404'
@@ -33,11 +33,11 @@ echo $api->getApiResponse('http://example.com'); // if 200 code return results e
 ### Example of Scraping web-pages
 
 ```php
-require 'simple_html_parser.php'; // include a simple-html-parser class 
+require 'simple_html_dom.php'; // include a simple-html-dom class 
 require 'api.php';  // include a api class 
 $api = new Api(); // initialized api class
 $results = $api->getApiResponse('http://example.com'); // if 200 code return results else 404 code return '404'
-echo $results->find('title', 0)->innertext; // scrape title from results of request using simple-html-parser
+echo $results->find('title', 0)->innertext; // scrape title from results of request using simple-html-dom
 ```
 
 ### Available methods
