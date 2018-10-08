@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-PHP tor + curl + simple html parser api to securely make any HTTP GET/POST requests or scrape websites.
+PHP Tor + cURL + Simple-Html-Parser api to securely make any HTTP GET/POST requests or scrape websites.
 
   - Protected from webcrawler detectors
   - fully supported popular web-scraper SHP
@@ -15,6 +15,7 @@ PHP tor + curl + simple html parser api to securely make any HTTP GET/POST reque
 - PHP 5.3 or higher
 - cURL
 - Simple Html Parser
+- Tor installed in server
 
 ### Installation
 
@@ -47,6 +48,9 @@ getApiResponse( 'http://example.com' ); // for making simple GET HTTP requests
 getApiResponse( 'http://example.com', 
     array( 'id' => 'somevalue', 'price' => 'somevalue'));  // for making simple POST HTTP requests
 ```
+
+**Please note:** You need to have TOR installed and running in your Apache or any linux server.
+
 
 License
 ----
